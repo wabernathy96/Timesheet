@@ -28,7 +28,7 @@
                         <th scope=“col” id="total-bill">Total Billed</th>
                       </tr>
                     </thead>
-                    <tbody id="table">
+                    <tbody id="body-table">
                       
                     </tbody>
                    </table>
@@ -36,22 +36,22 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="employeeName">Employee Name</label>
-                        <input type="input" class="form-control" id="employee-name" aria-describedby="newName" placeholder="Employee Name">
+                        <label for="TrainName">Train Name</label>
+                        <input type="input" class="form-control" id="train-name" aria-describedby="newTrainName" placeholder="Train Name">
                     </div>
                     <div class="form-group">
-                        <label for="role">Role</label>
-                        <input type="input" class="form-control" id="role" aria-describedby="newRole" placeholder="Role">
+                        <label for="TrainDestination">Train Destination</label>
+                        <input type="input" class="form-control" id="train-dest" aria-describedby="newTrainDest" placeholder="Train Destination">
                     </div>
                     <div class="form-group">
-                        <label for="startDate">Start Date: mm/dd/yy</label>
-                        <input type="input" class="form-control" id="start-date" aria-describedby="newStartDate" placeholder="Start Date">
+                        <label for="TrainTime">Train Time (HH:mm - Military Time)</label>
+                        <input type="input" class="form-control" id="train-time" aria-describedby="newTrainTime" placeholder="Train Time">
                     </div>
                     <div class="form-group">
-                        <label for="monthlyRate">Monthly Rate ($))</label>
-                        <input type="input" class="form-control" id="month-rate" aria-describedby="newMonthlyRate" placeholder="Monthly Rate"> 
+                        <label for="TrainFrequency">Frequency (min)</label>
+                        <input type="input" class="form-control" id="train-freq" aria-describedby="newTrainFreq" placeholder="Train Frequency"> 
                     </div>
-                    <button type="submit" class="btn btn-primary" id="employeeSubmit">Add Employee</button>
+                    <button type="submit" class="btn btn-primary" id="trainsubmit">Add Train</button>
                 </form>
                 </div>
             </div>
@@ -62,8 +62,22 @@
 
 
 
-
-
+    
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCYWMNZWiVfx6dRilrnCwL_7DRy3NDQ-IA",
+        authDomain: "timesheet-act.firebaseapp.com",
+        databaseURL: "https://timesheet-act.firebaseio.com",
+        projectId: "timesheet-act",
+        storageBucket: "timesheet-act.appspot.com",
+        messagingSenderId: "162313720222"
+    };
+    firebase.initializeApp(config);
+    </script>        
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
