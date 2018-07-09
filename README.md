@@ -1,2 +1,2 @@
 # Timesheet
-Timesheet actiity
+Timesheet app
